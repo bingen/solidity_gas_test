@@ -21,18 +21,18 @@ contract('Gas Test', accounts => {
     await wrapper.doNothing()
   })
 
-  it('uses Caller 1', async () => {
+  it('uses Caller Base', async () => {
     const caller = await getContract('Caller').new()
     await caller.createBase()
   })
 
-  it('uses Caller 1', async () => {
+  it('uses Caller Inherit', async () => {
     const caller = await getContract('Caller').new()
-    await caller.createBase()
+    await caller.createInherit()
   })
 
-  it('uses Caller 1', async () => {
+  it('uses Caller Wrapper', async () => {
     const caller = await getContract('Caller').new()
-    await caller.createBase()
+    await caller.createWrapper()
   })
 })
